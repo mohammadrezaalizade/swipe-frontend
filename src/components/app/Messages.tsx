@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "./ui/Input";
+import Title from "./ui/HeadLine";
 
 type SwitchBtn = "Direct" | "Groups";
 
@@ -16,6 +17,7 @@ const Messages = () => {
   return (
     <div className="flex flex-col gap-4">
       <Input />
+      {/* Switch Btns */}
       <div className="relative  py-2 px-2 flex justify-between items-center gap-4 bg-gray-200/60 rounded-md">
         <button
           onClick={handleDirectBtn}
@@ -38,6 +40,7 @@ const Messages = () => {
           Groups
         </button>
       </div>
+      <Title title="Discussions" />
     </div>
   );
 };
