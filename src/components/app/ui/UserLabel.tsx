@@ -18,7 +18,7 @@ const UserLabel: React.FC<Props> = ({
   //If userlabel is active border bottom have to be border-blue-500 if is not border-b-gray-300
   return (
     <div
-      className={`flex gap-4 justify-between border-b-2 border-b-gray-300 pb-2`}
+      className={`flex gap-4 justify-between border-b-2 border-b-gray-300 pb-2 group hover:border-blue-500 cursor-pointer transition duration-200`}
     >
       <div className="flex gap-3 items-center">
         <div className="relative w-12 h-12 rounded-lg">
