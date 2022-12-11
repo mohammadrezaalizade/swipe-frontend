@@ -1,26 +1,23 @@
 import React from "react";
-import avatar from "../../../assets/avatars/avatar-male-4.jpg";
-import { status } from "../../../types/user";
 import Profile from "./Profile";
+import { UserIcon } from "@heroicons/react/20/solid";
+import { status } from "../../../types/user";
 
 interface Props {
   profileURL: string;
   status: status;
   name: string;
-  lastMessage: string;
+  location: string;
 }
 
-const UserLabel: React.FC<Props> = ({
-  lastMessage,
+const ContactsLabel: React.FC<Props> = ({
+  location,
   name,
   profileURL,
   status,
 }) => {
-  //If userlabel is active border bottom have to be border-blue-500 if is not border-b-gray-300
   return (
-    <div
-      className={`flex gap-4 justify-between border-b-2 border-b-gray-300 pb-2 group hover:border-blue-500 cursor-pointer transition duration-200`}
-    >
+    <div className="flex gap-4 justify-between border-b-2 border-b-gray-300 pb-2  hover:border-blue-500 cursor-pointer transition duration-200 items-center">
       <div className="flex gap-3 items-center">
         <Profile name={name} photo={profileURL} status={status} />
         <div className="inline-block w-[200px]">
@@ -28,13 +25,13 @@ const UserLabel: React.FC<Props> = ({
             {name}
           </h2>
           <p className="text-sm font-normal text-gray-500 w-full truncate overflow-hidden block">
-            {lastMessage}
+            {location}
           </p>
         </div>
       </div>
-      <p className="text-xs font-medium text-gray-600">Today</p>
+      <UserIcon className="icon" />
     </div>
   );
 };
 
-export default UserLabel;
+export default ContactsLabel;
