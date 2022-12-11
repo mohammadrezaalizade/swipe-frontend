@@ -1,8 +1,11 @@
 import React from "react";
 import avatar from "../../assets/avatars/avatar-male-6.jpg";
 import ContentLayout from "./layouts/ContentLayout";
+import Accordion from "./ui/Accordion";
 import Divider from "./ui/Divider";
 import HeadLine from "./ui/HeadLine";
+import Account from "./settings/Account";
+
 const Settings = () => {
   return (
     <div className="flex flex-col gap-4 overflow-hidden">
@@ -20,7 +23,11 @@ const Settings = () => {
       </div>
       <HeadLine title="Settings" />
       <Divider />
-      <ContentLayout></ContentLayout>
+      <ContentLayout>
+        <Accordion alert="Account" title="">
+          <Account />
+        </Accordion>
+      </ContentLayout>
     </div>
   );
 };
