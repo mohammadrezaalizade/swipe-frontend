@@ -1,5 +1,7 @@
 import React from "react";
 import avatar from "../../assets/avatars/avatar-male-6.jpg";
+import ContentLayout from "./layouts/ContentLayout";
+import Divider from "./ui/Divider";
 import HeadLine from "./ui/HeadLine";
 const Settings = () => {
   return (
@@ -17,6 +19,8 @@ const Settings = () => {
         </div>
       </div>
       <HeadLine title="Settings" />
+      <Divider />
+      <ContentLayout></ContentLayout>
     </div>
   );
 };
