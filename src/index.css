@@ -12,3 +12,9 @@
     @apply p-0 m-0 box-border;
   }
 }
+
+@layer utilities {
+  .icon{
+    @apply w-7 h-7 text-gray-400
+  }
+}
