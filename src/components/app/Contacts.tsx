@@ -3,7 +3,8 @@ import ContentLayout from "./layouts/ContentLayout";
 import ContactsLabel from "./ui/ContactsLabel";
 import HeadLine from "./ui/HeadLine";
 import Input from "./ui/Input";
-
+import { motion } from "framer-motion";
+import { fadeInOut } from "../../utils/animations";
 const mockUser = {
   profile:
     "https://images.unsplash.com/photo-1670681160553-7695645afc40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80",
@@ -14,7 +15,14 @@ const mockUser = {
 
 const Contacts = () => {
   return (
-    <div className="flex flex-col gap-4 overflow-hidden">
+    <motion.div
+      variants={fadeInOut}
+      initial="hide"
+      animate="animate"
+      exit="exit"
+      key="ContactsScreen"
+      className="flex flex-col gap-4 overflow-hidden"
+    >
       <Input />
       <HeadLine title="Friends" />
       <ContentLayout>
@@ -31,7 +39,7 @@ const Contacts = () => {
           status="offline"
         />
       </ContentLayout>
-    </div>
+    </motion.div>
   );
 };
 

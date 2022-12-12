@@ -3,9 +3,18 @@ import ContentLayout from "./layouts/ContentLayout";
 import HeadLine from "./ui/HeadLine";
 import Input from "./ui/Input";
 import NotificationLabel from "./ui/NotificationLabel";
+import { motion } from "framer-motion";
+import { fadeInOut } from "../../utils/animations";
 const Notifications = () => {
   return (
-    <div className="flex flex-col gap-4 overflow-hidden">
+    <motion.div
+      variants={fadeInOut}
+      initial="hide"
+      animate="animate"
+      exit="exit"
+      className="flex flex-col gap-4 overflow-hidden"
+      key="NotificationsScreen"
+    >
       <Input />
       <HeadLine title="Notifications" />
       <ContentLayout>
@@ -22,7 +31,7 @@ const Notifications = () => {
           type="NEWS"
         />
       </ContentLayout>
-    </div>
+    </motion.div>
   );
 };
 

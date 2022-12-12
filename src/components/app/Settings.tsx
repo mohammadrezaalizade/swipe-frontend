@@ -5,10 +5,18 @@ import Accordion from "./ui/Accordion";
 import Divider from "./ui/Divider";
 import HeadLine from "./ui/HeadLine";
 import Account from "./settings/Account";
-
+import { motion } from "framer-motion";
+import { fadeInOut } from "../../utils/animations";
 const Settings = () => {
   return (
-    <div className="flex flex-col gap-4 overflow-hidden">
+    <motion.div
+      variants={fadeInOut}
+      initial="hide"
+      animate="animate"
+      exit="exit"
+      className="flex flex-col gap-4 overflow-hidden"
+      key="SettingsScreen"
+    >
       {/* OWNER INFORMATION */}
       <div className="flex gap-4 items-center">
         <img
@@ -28,7 +36,7 @@ const Settings = () => {
           <Account />
         </Accordion>
       </ContentLayout>
-    </div>
+    </motion.div>
   );
 };
 

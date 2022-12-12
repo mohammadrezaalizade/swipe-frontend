@@ -20,9 +20,15 @@ const App = () => {
           <AnimatePresence key="MessagesScreen">
             {currentScreen === "MESSAGES" && <Messages />}
           </AnimatePresence>
-          {currentScreen === "CONTACTS" && <Contacts />}
-          {currentScreen === "NOTIFICATIONS" && <Notifications />}
-          {currentScreen === "SETTINGS" && <Settings />}
+          <AnimatePresence key="ContactsScreen">
+            {currentScreen === "CONTACTS" && <Contacts />}
+          </AnimatePresence>
+          <AnimatePresence key="NotificationsScreen">
+            {currentScreen === "NOTIFICATIONS" && <Notifications />}
+          </AnimatePresence>
+          <AnimatePresence key="SettingsScreen">
+            {currentScreen === "SETTINGS" && <Settings />}
+          </AnimatePresence>
         </div>
         <div className="hidden lg:flex lg:col-span-8 w-full  flex-1 border-l border-dashed px-3">
           <h1>Messages</h1>
