@@ -6,7 +6,7 @@ import Notifications from "./Notifications";
 import Settings from "./Settings";
 import Sidebar from "./Sidebar";
 import TabBar from "./TabBar";
-
+import { AnimatePresence } from "framer-motion";
 const App = () => {
   const [currentScreen, setCureentScreen] = useState<ScreenType>("MESSAGES");
   return (
@@ -17,7 +17,9 @@ const App = () => {
       />
       <div className="px-3 py-2 overflow-y-scroll h-screen w-screen  lg:flex lg:justify-between lg:gap-3">
         <div className="flex flex-1 lg:w-[25vw] lg:max-w-[25vw] gap-2 mb-20 flex-col w-full">
-          {currentScreen === "MESSAGES" && <Messages />}
+          <AnimatePresence key="MessagesScreen">
+            {currentScreen === "MESSAGES" && <Messages />}
+          </AnimatePresence>
           {currentScreen === "CONTACTS" && <Contacts />}
           {currentScreen === "NOTIFICATIONS" && <Notifications />}
           {currentScreen === "SETTINGS" && <Settings />}

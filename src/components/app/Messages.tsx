@@ -34,6 +34,7 @@ const Messages = () => {
       animate="animate"
       exit="exit"
       className="flex flex-col gap-4 overflow-hidden"
+      key="MessagesScreen"
     >
       <Input />
       {/* Switch Btns */}
