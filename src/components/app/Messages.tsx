@@ -4,7 +4,8 @@ import Title from "./ui/HeadLine";
 import ContentLayout from "./layouts/ContentLayout";
 import UserLabel from "./ui/UserLabel";
 import { status } from "../../types/user";
-
+import { motion } from "framer-motion";
+import { fadeInOut } from "../../utils/animations";
 type SwitchBtn = "Direct" | "Groups";
 
 const mockUser = {
@@ -27,7 +28,13 @@ const Messages = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 overflow-hidden">
+    <motion.div
+      variants={fadeInOut}
+      initial="hide"
+      animate="animate"
+      exit="exit"
+      className="flex flex-col gap-4 overflow-hidden"
+    >
       <Input />
       {/* Switch Btns */}
       <div className="relative  py-2 px-2 flex justify-between items-center gap-4 bg-gray-200/60 rounded-md">
@@ -67,7 +74,7 @@ const Messages = () => {
           status="offline"
         />
       </ContentLayout>
-    </div>
+    </motion.div>
   );
 };
 
