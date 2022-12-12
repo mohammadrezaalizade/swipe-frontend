@@ -26,7 +26,7 @@ const variants: Variants = {
 };
 
 const Accordion: React.FC<Props> = ({ alert, title, children }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   return (
     <div>
       {/* HEADING */}
