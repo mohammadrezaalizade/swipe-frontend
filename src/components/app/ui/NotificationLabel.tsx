@@ -33,7 +33,7 @@ const NotificationLabel: React.FC<Props> = ({ message, type }) => {
   return (
     <div className="flex items-center gap-4 border-b-2 border-b-gray-300 pb-2 group hover:border-blue-500 cursor-pointer transition duration-200">
       {notificationIcon()}
-      <p className="text-sm font-semibold text-gray-600 truncate">{message}</p>
+      <p className="text-sm font-semibold text-gray-600 ">{message}</p>
     </div>
   );
 };
