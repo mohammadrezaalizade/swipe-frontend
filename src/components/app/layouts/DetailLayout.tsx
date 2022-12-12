@@ -14,6 +14,12 @@ const DetailLayout: React.FC<PropsWithChildren> = ({ children }) => {
           duration: 0.7,
         },
       }}
+      exit={{
+        x: "100vw",
+        transition: {
+          duration: 0.7,
+        },
+      }}
       className="absolute w-screen h-screen bg-gray-50 z-[999]"
     >
       {children}
