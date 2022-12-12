@@ -56,6 +56,7 @@ const Messages = () => {
               ? "text-blue-500 shadow-sm bg-white rounded-md"
               : "text-gray-500"
           }`}
+          disabled={true}
         >
           Groups
         </button>
