@@ -20,7 +20,7 @@ const DetailLayout: React.FC<PropsWithChildren> = ({ children }) => {
           duration: 0.7,
         },
       }}
-      className="absolute w-screen h-screen bg-gray-50 z-[999]"
+      className="absolute w-screen h-screen bg-gray-50 z-[999] lg:hidden"
     >
       {children}
     </motion.div>
