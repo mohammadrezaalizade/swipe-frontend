@@ -1,6 +1,6 @@
 import React from "react";
 import DetailLayout from "./layouts/DetailLayout";
-import { Header } from "./ui/message";
+import { Header, Footer } from "./ui/message";
 
 const Message = () => {
   return (
@@ -10,6 +10,7 @@ const Message = () => {
       {/* CHATS*/}
 
       {/* FOOTER */}
+      <Footer />
     </DetailLayout>
   );
 };
