@@ -12,14 +12,14 @@ const Header = () => {
   const [dialog, setDialog] = useState(false);
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 flex justify-between items-center px-2 py-4 shadow-md">
+      <div className="fixed lg:sticky lg:w-full lg:h-16 top-0 left-0 right-0 z-[99999] flex justify-between items-center px-5 py-4 shadow-md">
         <Contact />
         <div className="flex gap-4 items-center">
           <div className=" hidden md:flex md:items-center md:gap-4">
             <PhoneIcon className="w-7 h-auto text-gray-400 scale-100 hover:scale-110 hover:text-blue-500 transition-all duration-200 cursor-pointer " />
             <VideoCameraIcon className="w-7 h-auto text-gray-400 scale-100 hover:scale-110 hover:text-blue-500 transition-all duration-200 cursor-pointer " />
           </div>
-          <ChevronLeftIcon className="w-9 h-9 bg-gray-200 p-1.5 text-gray-400 rounded-full hover:text-blue-500 transition duration-150 cursor-pointer" />
+          <ChevronLeftIcon className="w-9 h-9 lg:hidden bg-gray-200 p-1.5 text-gray-400 rounded-full hover:text-blue-500 transition duration-150 cursor-pointer" />
           <EllipsisVerticalIcon
             onClick={() => setDialog(!dialog)}
             className="w-10 h-10  p-1.5 text-gray-400 rounded-full hover:text-blue-500 transition duration-150 cursor-pointer md:hidden"

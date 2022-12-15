@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar";
 import TabBar from "./TabBar";
 import { AnimatePresence } from "framer-motion";
 import Message from "./Message";
+import { Chat, Footer, Header } from "./ui/message";
 const App = () => {
   const [currentScreen, setCureentScreen] = useState<ScreenType>("MESSAGES");
   return (
@@ -20,8 +21,8 @@ const App = () => {
           cureentScreen={currentScreen}
           setCureentScreen={setCureentScreen}
         />
-        <div className="px-3 py-2 overflow-y-scroll h-screen w-screen  lg:flex lg:justify-between lg:gap-3">
-          <div className="flex flex-1 lg:w-[25vw] lg:max-w-[25vw] gap-2 mb-20 flex-col w-full">
+        <div className=" overflow-y-scroll h-screen w-screen  lg:flex lg:justify-between lg:gap-3">
+          <div className="flex flex-1 lg:w-[25vw] lg:max-w-[25vw] gap-2 mb-20 flex-col w-full px-3 py-2">
             <AnimatePresence key="MessagesScreen">
               {currentScreen === "MESSAGES" && <Messages />}
             </AnimatePresence>
@@ -35,8 +36,10 @@ const App = () => {
               {currentScreen === "SETTINGS" && <Settings />}
             </AnimatePresence>
           </div>
-          <div className="hidden lg:flex lg:col-span-8 w-full  flex-1 border-l border-dashed px-3">
-            <h1>Messages</h1>
+          <div className="hidden lg:flex lg:flex-col w-full  flex-1 border-l border-dashed">
+            <Header />
+            <Chat />
+            <Footer />
           </div>
         </div>
         <TabBar
