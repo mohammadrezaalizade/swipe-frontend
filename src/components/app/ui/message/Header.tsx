@@ -12,7 +12,7 @@ const Header = () => {
   const [dialog, setDialog] = useState(false);
   return (
     <>
-      <div className="fixed lg:sticky lg:w-full lg:h-16 top-0 left-0 right-0 z-[99999] flex justify-between items-center px-5 py-4 shadow-md">
+      <div className="fixed lg:sticky lg:w-full lg:h-16 top-0 left-0 right-0 z-[99999] flex justify-between items-center px-5 py-4 shadow-md bg-gray-50">
         <Contact />
         <div className="flex gap-4 items-center">
           <div className=" hidden md:flex md:items-center md:gap-4">

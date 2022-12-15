@@ -3,7 +3,7 @@ import { PaperAirplaneIcon, FaceSmileIcon } from "@heroicons/react/24/solid";
 const Footer = () => {
   const [textInputValue, setTextInputValue] = useState("");
   return (
-    <div className=" bg-white px-4 py-3 shadow-[0px_-4px_12px_-4px_rgba(0,0,0,0.1)]">
+    <div className=" bg-gray-50 px-4 py-3 shadow-[0px_-4px_12px_-4px_rgba(0,0,0,0.1)]">
       <div className="relative p-3 flex justify-between items-center gap-4 bg-gray-200/60 rounded-md">
         <FaceSmileIcon className="icon cursor-pointer hover:text-blue-500 z-10" />
         <input

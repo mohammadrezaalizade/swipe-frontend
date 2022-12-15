@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import avatar from "../../../assets/avatars/avatar-male-4.jpg";
 import { status } from "../../../types/user";
 import Profile from "./Profile";
@@ -16,9 +17,14 @@ const UserLabel: React.FC<Props> = ({
   profileURL,
   status,
 }) => {
+  const navigate = useNavigate();
   //If userlabel is active border bottom have to be border-blue-500 if is not border-b-gray-300
+  const toChatPage = () => {
+    navigate("/chat/:1");
+  };
   return (
     <div
+      onClick={toChatPage}
       className={`flex gap-4 justify-between border-b-2 border-b-gray-300 pb-2 group hover:border-blue-500 cursor-pointer transition duration-200`}
     >
       <div className="flex gap-3 items-center">

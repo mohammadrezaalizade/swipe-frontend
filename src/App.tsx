@@ -4,6 +4,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<AppPage />} />
+      <Route path="/chat" element={<AppPage />}>
+        <Route path=":cahtId" element={<AppPage />} />
+      </Route>
     </Routes>
   );
 }
