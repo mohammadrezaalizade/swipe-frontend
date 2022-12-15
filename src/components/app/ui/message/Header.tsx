@@ -12,7 +12,7 @@ const Header = () => {
   const [dialog, setDialog] = useState(false);
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 py-6 shadow-md">
+      <div className="fixed top-0 left-0 right-0 flex justify-between items-center px-2 py-4 shadow-md">
         <Contact />
         <div className="flex gap-4 items-center">
           <div className=" hidden md:flex md:items-center md:gap-4">
