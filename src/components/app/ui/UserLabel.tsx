@@ -9,6 +9,7 @@ interface Props {
   status: status;
   name: string;
   lastMessage: string;
+  userId:number
 }
 
 const UserLabel: React.FC<Props> = ({
@@ -16,6 +17,7 @@ const UserLabel: React.FC<Props> = ({
   name,
   profileURL,
   status,
+  userId
 }) => {
   const navigate = useNavigate();
   //If userlabel is active border bottom have to be border-blue-500 if is not border-b-gray-300
@@ -25,7 +27,7 @@ const UserLabel: React.FC<Props> = ({
   return (
     <div
       onClick={toChatPage}
-      className={`flex gap-4 justify-between border-b-2 border-b-gray-300 pb-2 group hover:border-blue-500 cursor-pointer transition duration-200`}
+      className={`flex gap-4 justify-between border-b-2  pb-2 group hover:border-blue-500 cursor-pointer transition duration-200 ${userId === 1 ? "border-b-blue-500" : "border-b-gray-300"}`}
     >
       <div className="flex gap-3 items-center">
         <Profile name={name} photo={profileURL} status={status} />

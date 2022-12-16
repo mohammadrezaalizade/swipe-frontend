@@ -36,6 +36,7 @@ const Header = () => {
           <motion.div
             initial={{
               opacity: 0,
+              backgroundColor:"white"
             }}
             animate={{
               opacity: 1,
@@ -49,7 +50,7 @@ const Header = () => {
                 duration: 0.3,
               },
             }}
-            className="absolute right-4 top-16 bg-white p-3 w-[150px] max-h-fit rounded-md flex flex-col gap-3"
+            className="absolute right-4 top-16 p-3 w-[150px] max-h-fit rounded-md flex flex-col gap-3 z-[9999999]"
           >
             <div className="group text-gray-400 hover:text-blue-500 flex items-center justify-between cursor-pointer">
               <PhoneIcon className="w-7 h-auto transition-all duration-200 " />

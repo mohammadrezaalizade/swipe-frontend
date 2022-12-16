@@ -68,12 +68,14 @@ const Messages = () => {
           name={mockUser.name}
           profileURL={mockUser.profile}
           status={mockUser.status as status}
+          userId={1}
         />
         <UserLabel
           lastMessage={mockUser.lastMessage}
           name={mockUser.name}
           profileURL={mockUser.profile}
           status="offline"
+          userId={2}
         />
       </ContentLayout>
     </motion.div>
