@@ -1,10 +1,12 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { App as AppPage } from "./components";
 import LocationService from "./services/LocationService";
+import PeerService from "./services/PeerService";
 function App() {
   const locationService = new LocationService();
-  useLayoutEffect(() => {
+  const peerService = new PeerService();
+  useEffect(() => {
     locationService
       .getUserLocation()
       .then((coords) => console.log(coords))

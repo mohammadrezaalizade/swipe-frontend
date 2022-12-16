@@ -1,11 +1,15 @@
 import Peer from "peerjs";
 import ClientService from "./ClientService";
-class MessageSerivce {
+class PeerService {
   peer: Peer;
   client: ClientService = new ClientService();
   connection: any;
   constructor() {
-    this.peer = new Peer(this.client.getClientId());
+    this.peer = new Peer(this.client.getClientId(), {
+      port: 9000,
+      path: "/messenger",
+      host: "/",
+    });
   }
 
   connect(clientId: string) {
@@ -13,4 +17,4 @@ class MessageSerivce {
   }
 }
 
-export default MessageSerivce;
+export default PeerService;
