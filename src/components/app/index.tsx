@@ -16,11 +16,7 @@ const App = () => {
 
   return (
     <>
-      {cahtId && (
-        <AnimatePresence>
-          <Message />
-        </AnimatePresence>
-      )}
+      <AnimatePresence>{cahtId && <Message />}</AnimatePresence>
       <div className="flex bg-gray-50">
         <Sidebar
           cureentScreen={currentScreen}
@@ -43,7 +39,7 @@ const App = () => {
           </div>
           <div
             className={`hidden lg:flex lg:flex-col w-full   flex-1 border-l border-dashed bg-chat bg-center  bg-contain ${
-              cahtId ?"": "items-center justify-center"
+              cahtId ? "" : "items-center justify-center"
             }`}
           >
             {cahtId ? (
