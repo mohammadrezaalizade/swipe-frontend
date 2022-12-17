@@ -8,6 +8,7 @@ import {
   useNavigationType,
 } from "react-router-dom";
 import { App as AppPage, SignUp, SingIn } from "./components";
+import { NotFound } from "./pages";
 import LocationService from "./services/LocationService";
 import PeerService from "./services/PeerService";
 function App() {
@@ -34,6 +35,7 @@ function App() {
       </Route>
       <Route path="/auth/sing-up" element={<SignUp />} />
       <Route path="/auth/sing-in" element={<SingIn />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
