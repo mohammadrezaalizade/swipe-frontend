@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLInputTypeAttribute } from "react";
 
 interface Props extends React.HTMLAttributes<HTMLInputElement> {
   label: string;
@@ -6,6 +6,7 @@ interface Props extends React.HTMLAttributes<HTMLInputElement> {
   value: string;
   placeHolder: string;
   error: boolean;
+  type?: HTMLInputTypeAttribute;
 }
 
 const Filed: React.FC<Props> = ({
@@ -14,6 +15,7 @@ const Filed: React.FC<Props> = ({
   value,
   placeHolder,
   error,
+  type,
   ...rest
 }) => {
   return (
@@ -22,7 +24,7 @@ const Filed: React.FC<Props> = ({
         {label}
       </label>
       <input
-        type="text"
+        type={type ? type : "text"}
         name={name}
         id={name}
         placeholder={placeHolder}
